@@ -1,41 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Page Title</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
+window.addEventListener('load', function() {
+    setTimeout(function() {
+        document.getElementById('loading-overlay').style.display = 'none';
+    }, 4000);
 
-    </head>
+    var i = 0;
+    var txt = "goated memes 2025 goated memes 2025 goated memes 2025";
+    var speed = 50;
 
-<body>
+    function typeWriter() {
+        if (i < txt.length) {
+            document.getElementById("d").innerHTML += txt.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+        }
+    }
 
-    <div id="loading-overlay">
-        <div id="loader"> <p id="d"></p> </div>
-    </div>
-<div class="hea">
-    
-    <h1>goated memes 2025</h1>
-    
-</div>
-        n 
-<div class="section">
-    <img src="fanof.PNG" >
-    <p> funny as hell takes me back</p>
-    <img src="d2.PNG">
-    <p> good dog</p>
-    <img src="vape.jpg">
-    <p> dont vape 🤷‍♂️</p>
-    <img src="fishfuck.PNG">
-    <p> some funny ish from way back</p>
-    <img src="ugly.webp">
-    <p> animal testing meme circa 25'</p>
-    <img src="love.PNG">
-    <p> silly meme i fouind</p>
-    <img src="dANIEL;.PNG">    
-    <p> 🤷‍♂️</p>
-</div>
-
-<script src="index.js"></script>
-</body>
-</html> 
+    typeWriter();
+});
